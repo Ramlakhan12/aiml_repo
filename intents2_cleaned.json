@@ -1,0 +1,583 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hello",
+        "hi",
+        "hey",
+        "good morning",
+        "good afternoon",
+        "good evening",
+        "namaste"
+      ],
+      "responses": [
+        "Hello! Welcome to Panjab University Assistant. Im here to help you discover the perfect course for your future. What type of program interests you most?",
+        "Hi there! Im excited to help you explore Panjab Universitys courses. Are you looking for undergraduate or postgraduate programs?"
+      ],
+      "keywords": [
+        "hello",
+        "hi",
+        "greeting"
+      ],
+      "flow_stage": "initial",
+      "next_stage": "course_discovery",
+      "recommendations": [
+        "Show me undergraduate courses",
+        "What postgraduate programs do you offer?",
+        "Im interested in engineering courses",
+        "Tell me about management programs"
+      ]
+    },
+    {
+      "tag": "course_discovery",
+      "patterns": [
+        "show courses",
+        "what courses",
+        "undergraduate courses",
+        "postgraduate programs",
+        "engineering courses",
+        "management programs",
+        "medical courses",
+        "arts courses",
+        "science courses",
+        "commerce courses",
+        "law courses",
+        "computer courses"
+      ],
+      "responses": [
+        "Great choice! Panjab University offers excellent programs across multiple streams. Here are our popular categories:\n\n Undergraduate: BA, BSc, BCom, BTech, BBA, BCA, BPharm, MBBS, BDS\n Postgraduate: MA, MSc, MBA, MCA, MTech, LLM, MPharm\n Professional: Law, Medicine, Pharmacy, Engineering\n\nWhich specific course catches your interest?"
+      ],
+      "keywords": [
+        "courses",
+        "programs",
+        "undergraduate",
+        "postgraduate"
+      ],
+      "flow_stage": "course_discovery",
+      "next_stage": "course_selection",
+      "recommendations": [
+        "Tell me about BTech programs",
+        "Whats available in MBA?",
+        "Show me BCA details",
+        "Im interested in medical courses"
+      ]
+    },
+    {
+      "tag": "BTech_selection",
+      "patterns": [
+        "BTech",
+        "engineering",
+        "Bachelor of Technology",
+        "BTech programs",
+        "engineering branches"
+      ],
+      "responses": [
+        "Excellent choice!  BTech at PU is a prestigious 4-year program with cutting-edge curriculum.\n\nAvailable Branches:\n Computer Science Engineering\n Mechanical Engineering\n Civil Engineering\n Electrical Engineering\n Electronics & Communication\n\nWhy choose BTech at PU?\n Industry-relevant curriculum\n State-of-the-art labs\n Excellent placement record\n Research opportunities\n\nWhich aspect would you like to explore first?"
+      ],
+      "keywords": [
+        "BTech",
+        "engineering"
+      ],
+      "flow_stage": "course_selection",
+      "next_stage": "course_details",
+      "recommendations": [
+        "What are BTech eligibility requirements?",
+        "Tell me about BTech fees",
+        "BTech admission process",
+        "Which branch has best placements?"
+      ]
+    },
+    {
+      "tag": "MBA_selection",
+      "patterns": [
+        "MBA",
+        "Master of Business Administration",
+        "management",
+        "business"
+      ],
+      "responses": [
+        "Fantastic!  MBA at PU is one of Indias top-ranked programs designed for future business leaders.\n\nSpecializations Available:\n Marketing Management\n Finance Management\n Human Resource Management\n Operations Management\n International Business\n\nProgram Highlights:\n 2-year full-time program\n Industry partnerships\n Case study methodology\n Internship opportunities\n Alumni network of 10,000 professionals\n\nWhat would you like to know more about?"
+      ],
+      "keywords": [
+        "MBA",
+        "management"
+      ],
+      "flow_stage": "course_selection",
+      "next_stage": "course_details",
+      "recommendations": [
+        "MBA eligibility and entrance exam",
+        "MBA fee structure",
+        "MBA specializations in detail",
+        "MBA placement statistics"
+      ]
+    },
+    {
+      "tag": "BCA_selection",
+      "patterns": [
+        "BCA",
+        "Bachelor of Computer Applications",
+        "computer applications"
+      ],
+      "responses": [
+        "Smart choice!  BCA at PU is perfect for launching your IT career with comprehensive programming and application development skills.\n\nWhat Youll Learn:\n Programming Languages C, C, Java, Python\n Database Management\n Web Development\n  Mobile App Development\n Software Engineering\n Network Administration\n\n 3-year program\n Industry-oriented curriculum\n Practical exposure\n Internship opportunities\n\nWhat specific information do you need?"
+      ],
+      "keywords": [
+        "BCA",
+        "computer applications"
+      ],
+      "flow_stage": "course_selection",
+      "next_stage": "course_details",
+      "recommendations": [
+        "BCA eligibility requirements",
+        "BCA course fees",
+        "BCA admission process",
+        "Career opportunities after BCA"
+      ]
+    },
+    {
+      "tag": "MBBS_selection",
+      "patterns": [
+        "MBBS",
+        "medical",
+        "Bachelor of Medicine",
+        "doctor",
+        "medicine"
+      ],
+      "responses": [
+        "Excellent aspiration!  MBBS at PU trains future doctors with world-class medical education and clinical exposure.\n\nProgram Details:\n Duration: 5.5 years 4.5 years  1 year internship\n Affiliated with Government Medical College\n Clinical training at PGI Chandigarh\n Research opportunities\n International exposure programs\n\nWhy PU Medical?\n Experienced faculty\n Modern infrastructure\n Hospital affiliations\n High NEET cut-offs ensure quality peers\n\nWhat would you like to explore?"
+      ],
+      "keywords": [
+        "MBBS",
+        "medical",
+        "doctor"
+      ],
+      "flow_stage": "course_selection",
+      "next_stage": "course_details",
+      "recommendations": [
+        "MBBS eligibility and NEET requirements",
+        "MBBS fee structure",
+        "MBBS admission process",
+        "Clinical training facilities"
+      ]
+    },
+    {
+      "tag": "course_eligibility",
+      "patterns": [
+        "eligibility",
+        "requirements",
+        "qualification needed",
+        "who can apply",
+        "BTech eligibility",
+        "MBA eligibility",
+        "BCA eligibility",
+        "MBBS eligibility"
+      ],
+      "responses": [
+        "Here are the eligibility requirements:\n\nBTech: 102 with Physics, Chemistry, Mathematics  JEE Main/PUCET\nMBA: Graduate degree  CAT/MAT/PUMET\nBCA: 102 any stream Mathematics preferred\nMBBS: 102 with PCB  NEET qualification\n\nDo you meet these requirements? I can help you understand the admission process next!"
+      ],
+      "keywords": [
+        "eligibility",
+        "requirements"
+      ],
+      "flow_stage": "course_details",
+      "next_stage": "admission_guidance",
+      "recommendations": [
+        "Tell me about the admission process",
+        "What are the course fees?",
+        "When do admissions start?",
+        "How is the entrance exam conducted?"
+      ]
+    },
+    {
+      "tag": "course_fees",
+      "patterns": [
+        "fees",
+        "cost",
+        "fee structure",
+        "tuition",
+        "how much",
+        "BTech fees",
+        "MBA fees",
+        "BCA fees",
+        "MBBS fees"
+      ],
+      "responses": [
+        "Heres the fee structure per year:\n\n Fee Breakdown:\n BTech: 85,000 - 1,20,000\n MBA: 1,50,000 - 3,00,000\n BCA: 25,000 - 45,000\n MBBS: 8,50,000 - 17,50,000\n\nIncludes tuition, lab, library, and other academic fees\n\n Good News: Scholarships and financial aid available! Want to know about fee payment options or financial assistance?"
+      ],
+      "keywords": [
+        "fees",
+        "cost",
+        "tuition"
+      ],
+      "flow_stage": "course_details",
+      "next_stage": "financial_planning",
+      "recommendations": [
+        "What scholarships are available?",
+        "Can I pay fees in installments?",
+        "Tell me about financial aid",
+        "Now show me the admission process"
+      ]
+    },
+    {
+      "tag": "admission_process",
+      "patterns": [
+        "admission process",
+        "how to apply",
+        "application",
+        "admission procedure",
+        "when do admissions start",
+        "admission steps"
+      ],
+      "responses": [
+        " Admission Process Made Simple:\n\nStep 1: Check eligibility \nStep 2: Register online at admissions.pu.ac.in\nStep 3: Fill application form & upload documents\nStep 4: Pay application fee 500-1000\nStep 5: Appear for entrance exam if required\nStep 6: Check merit list\nStep 7: Document verification\nStep 8: Fee payment & seat confirmation\n\n Timeline: Applications usually open in April-May\n\nReady for the next step? I can help you with campus life information!"
+      ],
+      "keywords": [
+        "admission",
+        "application",
+        "process"
+      ],
+      "flow_stage": "admission_guidance",
+      "next_stage": "campus_life",
+      "recommendations": [
+        "What documents do I need?",
+        "Tell me about hostel facilities",
+        "What about campus amenities?",
+        "Show me placement opportunities"
+      ]
+    },
+    {
+      "tag": "hostel_facilities",
+      "patterns": [
+        "hostel",
+        "accommodation",
+        "housing",
+        "residential",
+        "where to stay",
+        "hostel facilities",
+        "hostel fees",
+        "hostel life"
+      ],
+      "responses": [
+        " Your Home Away From Home!\n\nPU offers excellent residential facilities:\n\nHostel Features:\n 17 modern hostels 8 boys, 9 girls\n Furnished rooms with study tables\n High-speed Wi-Fi throughout\n 24x7 security and CCTV\n Common rooms and study halls\n Mess with nutritious meals\n Laundry facilities\n\nRoom Options:\n Single rooms: 45,000-65,000/year\n Shared rooms: 25,000-35,000/year\n Mess charges: 3,000-4,000/month\n\nWant to know about other campus facilities?"
+      ],
+      "keywords": [
+        "hostel",
+        "accommodation",
+        "residential"
+      ],
+      "flow_stage": "campus_life",
+      "next_stage": "complete_campus_info",
+      "recommendations": [
+        "Tell me about library facilities",
+        "What sports facilities are available?",
+        "Show me campus amenities",
+        "What about placement support?"
+      ]
+    },
+    {
+      "tag": "library_facilities",
+      "patterns": [
+        "library",
+        "books",
+        "study",
+        "research",
+        "library facilities",
+        "library timings",
+        "e-library",
+        "digital resources"
+      ],
+      "responses": [
+        " World-Class Learning Resources!\n\nCentral Library Highlights:\n 6 lakh books and journals\n Digital library with e-books & databases\n Research publication access\n Individual study carrels\n Group discussion rooms\n Computer terminals with internet\n Printing and scanning facilities\n\nTimings: 8:00 AM - 10:00 PM\nSpecial Features: 24x7 reading halls during exams\n\nPlus departmental libraries for specialized resources!\n\nShall we explore sports and recreational facilities next?"
+      ],
+      "keywords": [
+        "library",
+        "books",
+        "study",
+        "research"
+      ],
+      "flow_stage": "complete_campus_info",
+      "next_stage": "final_engagement",
+      "recommendations": [
+        "What sports facilities are there?",
+        "Tell me about placement opportunities",
+        "Show me campus medical facilities",
+        "I want to know about student activities"
+      ]
+    },
+    {
+      "tag": "sports_facilities",
+      "patterns": [
+        "sports",
+        "games",
+        "gymnasium",
+        "swimming",
+        "athletics",
+        "sports complex",
+        "physical activities",
+        "recreation"
+      ],
+      "responses": [
+        " Stay Fit, Stay Active!\n\nSports Infrastructure:\n Olympic-size swimming pool\n International athletics track\n Multiple cricket grounds\n Basketball & volleyball courts\n Badminton complex 12 courts\n Modern gymnasium\n Tennis courts\n Football ground\n Shooting range\n\nSpecial Programs:\n Professional coaching available\n Inter-university competitions\n Sports scholarships\n Fitness programs\n\nAthletes get special facilities and support! Ready to learn about career prospects?"
+      ],
+      "keywords": [
+        "sports",
+        "gymnasium",
+        "athletics",
+        "recreation"
+      ],
+      "flow_stage": "complete_campus_info",
+      "next_stage": "final_engagement",
+      "recommendations": [
+        "Tell me about placement statistics",
+        "What companies visit for recruitment?",
+        "Show me alumni success stories",
+        "How do I apply for admission?"
+      ]
+    },
+    {
+      "tag": "placement_opportunities",
+      "patterns": [
+        "placements",
+        "jobs",
+        "recruitment",
+        "career",
+        "companies",
+        "placement statistics",
+        "salary packages",
+        "internships"
+      ],
+      "responses": [
+        " Launch Your Dream Career!\n\nPlacement Highlights:\n 90 placement rate across courses\n Top Recruiters: TCS, Infosys, Microsoft, Google, Amazon, Deloitte, McKinsey, HDFC, etc.\n Average Packages: 4-12 LPA\n Highest Packages: 45 LPA\n\nCourse-wise Opportunities:\n BTech: Software, Core Engineering, Startups\n MBA: Consulting, Banking, Marketing, Operations\n BCA: IT, Software Development, Tech Support\n Medical: Hospitals, Research, Higher Studies\n\nCareer Support:\n Dedicated placement cell\n Interview preparation\n Resume building workshops\n Industry mentorship\n\nExcited about your future at PU?"
+      ],
+      "keywords": [
+        "placement",
+        "jobs",
+        "career",
+        "recruitment"
+      ],
+      "flow_stage": "final_engagement",
+      "next_stage": "conversion",
+      "recommendations": [
+        "Im ready to apply! Whats next?",
+        "Can I visit the campus?",
+        "Tell me about application deadlines",
+        "Connect me with admission counselor"
+      ]
+    },
+    {
+      "tag": "ready_to_apply",
+      "patterns": [
+        "ready to apply",
+        "want to join",
+        "how to start",
+        "next steps",
+        "Im interested",
+        "lets proceed",
+        "ready for admission"
+      ],
+      "responses": [
+        " Fantastic! Youre making a great choice!\n\nYour Next Steps:\n\n1 Visit: admissions.pu.ac.in\n2 Register with your details\n3 Prepare required documents\n4 Apply before deadline\n\nNeed Help?\n Admission Helpline: 0172-2534848\n Email: admissions@pu.ac.in\n Visit: Admission Office, Sector 14, Chandigarh\n\nPro Tip: Apply early for better hostel allotment!\n\nWould you like me to help with anything else, or do you want to connect with an admission counselor?"
+      ],
+      "keywords": [
+        "apply",
+        "join",
+        "admission",
+        "next steps"
+      ],
+      "flow_stage": "conversion",
+      "next_stage": "support",
+      "recommendations": [
+        "Schedule a campus visit",
+        "Get admission counselor contact",
+        "Download application checklist",
+        "Join PU student groups"
+      ]
+    },
+    {
+      "tag": "campus_visit",
+      "patterns": [
+        "visit campus",
+        "campus tour",
+        "see university",
+        "campus visit",
+        "can I visit",
+        "open house",
+        "campus days"
+      ],
+      "responses": [
+        " Absolutely! Campus visits are encouraged!\n\nCampus Visit Options:\n Daily visits: 9 AM - 5 PM Working days\n Guided tours: Available on request\n Open House: During admission season\n Special events: Orientation programs\n\nWhat Youll See:\n Academic departments\n Hostels and mess facilities\n Sports complex\n Library and labs\n Student activity centers\n\nTo Schedule:\n Call: 0172-2534848\n Email: info@pu.ac.in\n\nAddress: Panjab University, Sector 14, Chandigarh\n\nBring your parents along - theyll love the campus too!"
+      ],
+      "keywords": [
+        "visit",
+        "campus",
+        "tour"
+      ],
+      "flow_stage": "support",
+      "next_stage": "final_support",
+      "recommendations": [
+        "Get directions to campus",
+        "Download campus map",
+        "Best time to visit",
+        "What to bring for visit"
+      ]
+    },
+    {
+      "tag": "contact_support",
+      "patterns": [
+        "contact",
+        "help",
+        "support",
+        "counselor",
+        "assistance",
+        "admission office",
+        "talk to someone",
+        "get help"
+      ],
+      "responses": [
+        " Were Here to Help You Succeed!\n\nGet Personalized Assistance:\n\nAdmission Counselors:\n Direct Line: 0172-2534848\n Toll Free: 1800-180-2065\n Email: admissions@pu.ac.in\n\nVisit Us:\n Admission Office\nPanjab University\nSector 14, Chandigarh - 160014\n\nOnline Support:\n Live Chat: pu.ac.in\n WhatsApp: Available during office hours\n\nOffice Hours: 9:30 AM - 5:00 PM Mon-Fri\n\nOur counselors will guide you through every step of your admission journey!"
+      ],
+      "keywords": [
+        "contact",
+        "support",
+        "help",
+        "counselor"
+      ],
+      "flow_stage": "final_support",
+      "next_stage": "complete",
+      "recommendations": [
+        "Schedule a call back",
+        "Get WhatsApp support number",
+        "Find nearest PU center",
+        "Join prospective student group"
+      ]
+    },
+    {
+      "tag": "farewell",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "thanks",
+        "thank you",
+        "see you",
+        "exit"
+      ],
+      "responses": [
+        "Thank you for exploring Panjab University with me!  Im excited about your bright future ahead. Remember, were here to support you at every step. Best of luck with your application! See you on campus soon! "
+      ],
+      "keywords": [
+        "bye",
+        "thanks"
+      ],
+      "flow_stage": "complete",
+      "next_stage": "restart",
+      "recommendations": []
+    },
+    {
+      "tag": "noanswer",
+      "patterns": [],
+      "responses": [
+        "Id love to help you with that! Let me guide you to the right information. Are you looking for course details, admission process, campus facilities, or something else?",
+        "Great question! I can help you with courses, admissions, fees, campus life, or any other PU-related queries. What interests you most?"
+      ],
+      "keywords": [
+        "unknown"
+      ],
+      "flow_stage": "any",
+      "next_stage": "redirect",
+      "recommendations": [
+        "Show me available courses",
+        "Tell me about admission process",
+        "What are the campus facilities?",
+        "Help me choose the right course"
+      ]
+    }
+  ],
+  "flow_configuration": {
+    "stages": {
+      "initial": {
+        "purpose": "Welcome and initial engagement",
+        "primary_goal": "Identify students interest area",
+        "typical_questions": [
+          "greeting",
+          "general_inquiry"
+        ]
+      },
+      "course_discovery": {
+        "purpose": "Help discover course categories",
+        "primary_goal": "Narrow down to specific courses",
+        "typical_questions": [
+          "course_categories",
+          "program_types"
+        ]
+      },
+      "course_selection": {
+        "purpose": "Detailed course information",
+        "primary_goal": "Generate interest in specific course",
+        "typical_questions": [
+          "specific_course_details"
+        ]
+      },
+      "course_details": {
+        "purpose": "Address practical concerns",
+        "primary_goal": "Build confidence in course choice",
+        "typical_questions": [
+          "eligibility",
+          "fees",
+          "curriculum"
+        ]
+      },
+      "admission_guidance": {
+        "purpose": "Guide through admission process",
+        "primary_goal": "Simplify admission steps",
+        "typical_questions": [
+          "how_to_apply",
+          "documents",
+          "timeline"
+        ]
+      },
+      "campus_life": {
+        "purpose": "Showcase campus experience",
+        "primary_goal": "Create emotional connection",
+        "typical_questions": [
+          "hostel",
+          "facilities",
+          "student_life"
+        ]
+      },
+      "complete_campus_info": {
+        "purpose": "Complete campus picture",
+        "primary_goal": "Address all campus-related concerns",
+        "typical_questions": [
+          "library",
+          "sports",
+          "medical_facilities"
+        ]
+      },
+      "final_engagement": {
+        "purpose": "Focus on career outcomes",
+        "primary_goal": "Create urgency and excitement",
+        "typical_questions": [
+          "placements",
+          "career_prospects"
+        ]
+      },
+      "conversion": {
+        "purpose": "Guide to application",
+        "primary_goal": "Convert to applicant",
+        "typical_questions": [
+          "ready_to_apply",
+          "next_steps"
+        ]
+      },
+      "support": {
+        "purpose": "Provide ongoing assistance",
+        "primary_goal": "Ensure successful application",
+        "typical_questions": [
+          "contact_info",
+          "visit_campus"
+        ]
+      }
+    }
+  }
+}
